@@ -1,0 +1,370 @@
+/* colors */
+/* font-size */
+/* backgrounds */
+body {
+  margin: 0;
+  color: #146492;
+  font: 18px/27px Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+img {
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+input,
+textarea,
+select {
+  font: 100% arial, sans-serif;
+  vertical-align: middle;
+}
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+header,
+footer,
+article,
+section,
+hgroup,
+nav,
+figure {
+  display: block;
+}
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+.float-heal {
+  display: block;
+  clear: both;
+  content: "";
+}
+.text-indent {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.logo {
+  width: 280px;
+  height: 55px;
+  background: url(../images/logo.jpg) no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  float: left;
+  margin: 26px 0 0;
+}
+.logo a {
+  height: 100%;
+  display: block;
+}
+#header div.meta {
+  margin: 40px 0 33px;
+  color: #878;
+  float: right;
+  display: block;
+  font-size: 20px;
+  line-height: 27px;
+  font-style: italic;
+  text-align: right;
+}
+#header div.meta a {
+  color: #659a51;
+  display: block;
+}
+#nav {
+  position: relative;
+  clear: both;
+}
+.main-nav {
+  margin: 0 0 20px;
+  padding: 0;
+  background: #218cc8;
+}
+.main-nav li {
+  float: left;
+  list-style-type: none;
+  line-height: 20px;
+  padding: 15px 21px 12px;
+}
+.main-nav li:hover {
+  background: #125c87;
+}
+.main-nav li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-nav li a:hover {
+  text-decoration: none;
+}
+.main-nav li.active {
+  background: #125c87;
+  position: relative;
+}
+.main-nav li.active:after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin: 0 0 0 -8px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #125c87;
+}
+.main-nav:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.icons {
+  margin: 0 14px;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+.icons li {
+  float: left;
+  margin: 0 0 0 8px;
+}
+.icons li a {
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 24px;
+  height: 22px;
+  background: url(../images/icons.png) no-repeat;
+}
+.icons li .icon-email {
+  background-position: 0 0;
+}
+.icons li .icon-facebook {
+  background-position: -32px 0;
+}
+.image-place {
+  width: 960px;
+  height: 171px;
+  background: url(../images/common-img.jpg) no-repeat;
+  position: relative;
+  margin-bottom: 20px;
+}
+.image-place a {
+  position: absolute;
+  bottom: 25px;
+  right: 26px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f28221;
+  padding: 12px 24px;
+}
+.image-place a:hover {
+  text-decoration: none;
+  background: #ff9332;
+}
+.filters {
+  margin-bottom: 20px;
+}
+.filters ul {
+  margin: 0;
+  padding: 0;
+}
+.filters ul li {
+  float: left;
+  list-style-type: none;
+  margin-right: 5px;
+  line-height: 38px;
+  border: 1px solid #cecdcc;
+  background: #ededed;
+}
+.filters ul li a {
+  color: #cecdcc;
+  font-size: 16px;
+  padding: 11px 17px 14px;
+  font-weight: bold;
+}
+.filters ul li a:hover {
+  color: #146492;
+  text-decoration: none;
+}
+.filters ul li.active {
+  background: #dfedf5;
+  border: 1px solid #146492;
+}
+.filters ul li.active a {
+  color: #146492;
+}
+.filters .search-form {
+  float: right;
+}
+.filters .search-form input[type="text"] {
+  width: 238px;
+  height: 30px;
+  border: 3px solid #e4eedf;
+  outline: 1px solid #849e74;
+  font: 12px/27px Verdana;
+  padding: 0 0 0 9px;
+}
+.filters .search-form input[type="submit"] {
+  border: 1px solid #849e74;
+  height: 38px;
+  color: #637f51;
+  font: 16px Arial;
+  font-weight: bold;
+  background: #c5debb;
+  padding: 10px 13px ;
+}
+.filters:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.products ul.row {
+  margin: 0 0 26px;
+  padding: 24px 0 0 0;
+  border-top: 1px dotted #cecdcc;
+}
+.products ul.row li {
+  float: left;
+  list-style-type: none;
+  font-size: 18px;
+}
+.products ul.row li a {
+  color: #444545;
+  font-weight: bold;
+}
+.products ul.row li a span.price {
+  color: #4c9242;
+}
+.products ul.row li a span.cod {
+  color: #676767;
+}
+.products ul.row li a div.price {
+  float: left;
+}
+.products ul.row li a div.cod {
+  float: right;
+}
+.products ul.row li a:hover {
+  text-decoration: none;
+}
+.products ul.row li h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #146492;
+}
+.products ul.row li img {
+  border: 9px solid #eaecf0;
+  outline: 1px solid #cecdcc;
+}
+.products ul.row li.left {
+  margin-right: 31px;
+}
+.products ul.row li.center {
+  margin-right: 31px;
+}
+.products ul.row:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+div.pagination-holder {
+  padding: 10px 0;
+  border-top: 1px dotted #cecdcc;
+  border-bottom: 1px dotted #cecdcc;
+  margin: 0 0 20px;
+}
+div.pagination {
+  background: #dfedf5;
+  border: 1px solid #cecdcc;
+  padding: 10px;
+  text-align: center;
+}
+div.pagination a.btn-previous,
+div.pagination a.btn-next {
+  color: #fff;
+  padding: 15px 20px;
+  background: #218cc8;
+}
+div.pagination a.btn-previous:hover,
+div.pagination a.btn-next:hover {
+  text-decoration: none;
+}
+div.pagination a.btn-previous {
+  float: left;
+  background: #a5bfcf;
+}
+div.pagination a.btn-next {
+  float: right;
+}
+div.pagination ul {
+  padding: 0;
+  display: inline-block;
+  margin-bottom: 0;
+}
+div.pagination ul li {
+  float: left;
+  list-style-type: none;
+  margin-right: 5px;
+}
+div.pagination ul li a {
+  color: #fff;
+  padding: 15px 20px;
+  background: #218cc8;
+}
+div.pagination ul li a:hover {
+  text-decoration: none;
+}
+div.pagination ul .active a {
+  background: #125c87;
+}
+div.pagination ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+div.pagination:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+#footer {
+  color: #50868a;
+  font: 11px Verdana;
+  margin-bottom: 26px;
+}
+#footer span {
+  display: block;
+}
+#footer .nav-bottom {
+  overflow: hidden;
+  float: right;
+}
+#footer .nav-bottom ul {
+  margin: 0;
+  padding: 0;
+}
+#footer .nav-bottom ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 11px;
+  border-right: 1px solid #50868a;
+  padding: 0 8px;
+  margin-right: -1px;
+}
+#footer .nav-bottom ul li a {
+  color: #50868a;
+}
+#footer .nav-bottom ul li a:hover {
+  text-decoration: underline;
+}

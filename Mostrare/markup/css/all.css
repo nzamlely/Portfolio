@@ -1,0 +1,220 @@
+/* colors */
+/* font-size */
+/* backgrounds */
+* {
+  font-size: 100.01%;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+@font-face {
+  font-family: Oswald;
+  src: url(../fonts/Oswald.otf);
+}
+@font-face {
+  font-family: Yellowtail;
+  src: url(../fonts/Yellowtail.otf);
+}
+@font-face {
+  font-family: Open-sans;
+  src: url(../fonts/Open-sans.ttf);
+}
+body {
+  margin: 0;
+  color: #ffffff;
+  font: 1.2em/1.8em Open-sans, Helvetica, sans-serif;
+  background: url(../images/bg.png);
+}
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+input,
+textarea,
+select {
+  font: 100% arial, sans-serif;
+  vertical-align: middle;
+}
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+header,
+footer,
+article,
+section,
+hgroup,
+nav,
+figure {
+  display: block;
+}
+/* Mixins */
+.float-healer {
+  display: block;
+  clear: both;
+  content: "";
+}
+.text-indent {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.sidebar-font {
+  font-family: Oswald;
+  font-size: 1.250em;
+  line-height: 1.333em;
+}
+/* End */
+#wrapper {
+  margin: 0;
+}
+.sidebar {
+  float: left;
+  width: 30%;
+  min-width: 200px;
+  background: url(../images/bg-sidebar.png);
+}
+.sidebar .logo {
+  margin: 40px 0 0 30px;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  width: 12em;
+  height: 3.083em;
+  background: url(../images/logo.png) no-repeat;
+}
+.sidebar .logo a {
+  display: block;
+  height: 100%;
+}
+.sidebar .desc {
+  display: block;
+  font-family: Open-sans;
+  line-height: 1.666em;
+  margin: 0 0 50px 30px;
+}
+.sidebar #nav ul {
+  margin: 0 0 30px 30px;
+  padding: 0;
+}
+.sidebar #nav ul li {
+  font-family: Oswald;
+  font-size: 1.250em;
+  line-height: 1.333em;
+  list-style-type: none;
+}
+.sidebar #nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.sidebar #nav ul .active a {
+  color: #f39c12;
+}
+.sidebar .tweet h2 {
+  text-transform: uppercase;
+  font-family: Oswald;
+  font-size: 1.250em;
+  line-height: 1.333em;
+  margin: 0 0 10px 55px;
+  position: relative;
+}
+.sidebar .tweet h2:before {
+  content: "";
+  background: url(../images/tweet-icon.png) no-repeat;
+  width: 21px;
+  height: 14px;
+  position: absolute;
+  left: -25px;
+  top: 3px;
+}
+.sidebar .tweet .text-holder {
+  margin: 0 0 30px 30px;
+  width: 40%;
+  line-height: 1.5em;
+}
+.sidebar .social h2 {
+  font-family: Oswald;
+  font-size: 1.250em;
+  line-height: 1.333em;
+  text-transform: uppercase;
+  margin: 0 0 15px 30px;
+}
+.sidebar .social ul {
+  margin: 0 0 30px 30px;
+  padding: 0;
+}
+.sidebar .social ul li {
+  float: left;
+  list-style-type: none;
+  margin: 0 12px 0 0;
+}
+.sidebar .social ul li a {
+  width: 13px;
+  height: 14px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(../images/social.gif) no-repeat;
+}
+.sidebar .social ul li .facebook {
+  background-position: 0 0;
+}
+.sidebar .social ul li .vimeo {
+  background-position: -23px 0;
+}
+.sidebar .social ul li .beehance {
+  background-position: -49px 0;
+}
+.sidebar .social ul li .web {
+  background-position: -75px 0;
+}
+.sidebar .social ul li .video {
+  background-position: -101px 0;
+}
+.sidebar .social ul li .camp {
+  background-position: -125px 0;
+}
+.sidebar .social ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.sidebar .by {
+  clear: both;
+  margin: 0 0 65% 30px;
+}
+.sidebar .by span {
+  display: block;
+}
+.sidebar .by span a {
+  color: #fff;
+}
+#main {
+  overflow: hidden;
+  float: right;
+  width: 70%;
+}
+#main .item-list {
+  margin: 4% 0 4% 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+#main .item-list li {
+  list-style-type: none;
+  display: inline-block;
+  width: 24.33%;
+  padding: 0 0 5% 5%;
+  letter-spacing: normal;
+}
