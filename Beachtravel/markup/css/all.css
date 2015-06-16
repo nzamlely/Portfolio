@@ -220,8 +220,41 @@ figure {
 #options .shopping-cart-info .items-number {
   color: #f4d630;
 }
-#options .select-bg-slider {
+#options .bg-slider {
   float: right;
+  padding: 10px;
+  margin-top: 44px;
+  background: #000;
+}
+#options .bg-slider h4 {
+  color: #fff;
+  font-size: 23px;
+  margin: 0 5px 0 0;
+  font-weight: bold;
+  float: left;
+}
+#options .bg-slider .select-bg-slider {
+  list-style-type: none;
+  float: right;
+  margin: 3px 0 0;
+  padding: 0;
+}
+#options .bg-slider .select-bg-slider li {
+  float: left;
+  margin-right: 4px;
+}
+#options .bg-slider .select-bg-slider li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: #03476a;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+#options .bg-slider .select-bg-slider .active a {
+  background: red;
 }
 #options:after {
   clear: both;
