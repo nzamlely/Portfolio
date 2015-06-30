@@ -1,0 +1,1510 @@
+@import "variables.less";
+
+@font-face {
+	font-family: Exo;
+	src: url(../fonts/Exo2.0-Black.otf);
+}
+@font-face {
+	font-family: Open-sans;
+	src: url(../fonts/Open-sans.ttf);
+}
+body{
+	margin: 0;
+	color: @textcolor;
+	font: @middle-font-size/@middle-line-height Open-sans, Helvetica, sans-serif;
+	background: @main-bg;
+}
+img{
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{text-decoration: underline;}
+input,
+textarea,
+select{
+	font: 100% arial,sans-serif;
+	vertical-align: middle;
+}
+form,fieldset{
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+header, footer, article, section, hgroup, nav, figure { display: block; }
+
+/* Mixins */
+	.float-healer {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	.text-indent {
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+/* End of Mixins */
+
+.container {
+	margin: 0 auto;
+	max-width: 1170px;
+}
+#header {
+	.logo {
+		margin: 21px 0 22px;
+		.text-indent;
+		display: block;
+		width: 128px;
+		height: 27px;
+		background: url(../images/logo.png) no-repeat;
+		float: left;
+		a {
+			display: block;
+			height: 100%;
+		}
+	}
+	&:after {
+		.float-healer;
+	}	
+	.opener {
+		float: right;
+		width: 31px;
+		height: 31px;
+		background: #2f3235;
+		position: relative;
+		border-radius: 3px;
+		.text-indent;
+		margin: 19px 10px 20px 19px;
+		display: none; 
+	}
+	.opener:before, .opener:after, .opener span {
+		background: #fff;
+		border-radius: 4px;
+		position: absolute;
+		top: 16px;
+		left: 25%;
+		right: 25%;
+		height: 3px;
+		margin-top: -2px;
+	}
+	.opener:before, .opener:after {
+		content: "";
+		top: 10px; 
+	}
+	.opener:after {
+		top: 22px; 
+	}
+	.opener:hover {
+		opacity: 0.7; 
+	}
+	#nav {
+		font-family: Exo;
+		font-size: 15px;
+		line-height: 15px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		ul {
+			margin: 0 200px 0 0;
+			padding: 0;
+			list-style-type: none;
+			float: right;
+			li {
+				float: left;
+				a {
+					display: block;
+					padding: 27px 20px 27px 24px;
+				&:hover {
+						text-decoration: none;
+						background: #dfdfdf;
+					}					
+				}
+				&.active {
+					a {
+						background: #dfdfdf;
+						border: 1px solid black;
+					}
+				}
+			}	
+		}
+	}
+}
+#main:after {
+	.float-healer;
+}
+section {
+	text-align: center;
+	padding: 170px 0;
+	h2 {
+		margin: 0 0 30px 0;
+		font-family: Exo;
+		font-size: 46px;
+		line-height: 46px;
+		text-transform: uppercase;
+		color: black;
+	}
+}
+.slider {
+	.slider-wrapper {
+		position: relative;
+		margin-bottom: -6px;
+		#slider-box {
+			height: auto;
+			img {
+				display: none;
+				top: 0;
+				position: absolute;
+			}
+		}
+	}
+	#slider-nav {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		height: 107px;
+		display: block;
+		text-indent: -9999px;
+		.left {
+			float: left;
+			background: url(../images/slider-left-button.png) no-repeat;
+			display: block;
+			width: 74px;
+			height: 100%;
+			position: relative;
+			top: -50%;
+		}
+		.right {
+			float: right;
+			background: url(../images/slider-right-button.png) no-repeat;
+			display: block;
+			width: 74px;
+			height: 100%;
+			position: relative;
+			top: -50%;
+		}
+	}
+}
+.pageslider {
+	position: absolute;
+	left: 50%;
+	margin-left: -54px;
+	width: 108px;
+	height: 107px;
+	background: url(../images/page-slider-to-about.png) no-repeat;
+	margin-top: -53px;
+	cursor: pointer;
+}
+.page-slider-portfolio {
+	background: url(../images/page-slider-to-portfolio.png) no-repeat;
+}
+.about {
+	background: #cbcbcb;
+	p {
+		margin: 20px 30px 40px;
+		font-size: 14px;
+		font-family: Open-sans;
+		line-height: 22px;
+	}
+	.logo {
+		margin-bottom: 40px;
+	}
+	.social {
+		text-align: center;
+		ul {
+		padding: 0;
+		display: inline-block;
+			li {
+				float: left;
+				list-style-type: none;
+				margin: 0 30px 0 0;
+				a {
+					width: 75px;
+					height: 75px;
+					display: block;
+					.text-indent;
+					background: url(../images/social-sprite.png) no-repeat;
+					&:hover {
+					background: url(../images/social-sprite-hover.png) no-repeat;
+					}
+				}
+				.facebook {
+				background-position: 0 0; 
+				}
+				.tweeter {
+				background-position: -105px 0; 
+				}
+				.dribbble {
+				background-position: -210px 0; 
+				}
+				.thumblr {
+				background-position: -315px 0; 
+				}
+				.linkedin {
+				background-position: -420px 0; 
+				}
+				.pinterest {
+				background-position: -525px 0; 
+				}
+			}
+			&:after {
+			.float-healer;
+			}
+		}
+	}
+}
+.portfolio {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	.opener {
+		float: right;
+		width: 31px;
+		height: 31px;
+		background: #2f3235;
+		position: relative;
+		border-radius: 3px;
+		.text-indent;
+		margin: 19px 10px 20px 19px;
+		display: none; 
+	}
+	.opener:before, .opener:after, .opener span {
+		background: #fff;
+		border-radius: 4px;
+		position: absolute;
+		top: 16px;
+		left: 25%;
+		right: 25%;
+		height: 3px;
+		margin-top: -2px;
+	}
+	.opener:before, .opener:after {
+		content: "";
+		top: 10px; 
+	}
+	.opener:after {
+		top: 22px; 
+	}
+	.opener:hover {
+		opacity: 0.7; 
+	}
+	.filter-nav {
+		text-align: center;
+		ul {
+		display: inline-block;
+			li {
+			float: left;
+			list-style-type: none;
+			border: 1px solid black;
+			font-family: Exo;
+			font-size: 15px;
+			line-height: 35px;
+			text-transform: uppercase;
+				a {
+					padding: 0 15px;
+				}
+				&:hover {
+					background: #dfdfdf;
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+			.active {
+				background: #000;
+				a {
+					color: #fff;
+				}
+			}
+			.grid {
+				.text-indent;
+				width: 37px;
+				height: 37px;
+				background: url(../images/icon-grid.png) no-repeat;
+				border: none;
+				cursor: pointer;
+				&:hover {
+					background: url(../images/icon-grid-hover.png);
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+			.grid-active-grid {
+				background: url(../images/icon-grid-active.png) no-repeat;
+			}
+			.romb {
+				.text-indent;
+				width: 37px;
+				height: 37px;
+				background: url(../images/icon-romb.png) no-repeat;
+				border: none;
+				cursor: pointer;
+				&:hover {
+					background: url(../images/icon-romb-hover.png);
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+			.romb-active-grid {
+				background: url(../images/icon-romb-active.png) no-repeat;
+			}
+		}
+	}
+	.porfolio-gallery {
+		.gallery-box {
+			font-size: 0;
+			line-height: 0;
+			letter-spacing: -4px;
+			padding: 0;
+			li {
+				display: inline-block;
+				list-style-type: none;
+				padding: 0 0 10px 10px;
+				letter-spacing: normal;
+			}
+		}
+	}
+	.romb-form  {
+	position: relative;
+	height: 1200px;
+		.gallery-box {
+			position: absolute;
+			top: 80px;
+			font-size: 0;
+			line-height: 0;
+			letter-spacing: -4px;
+			padding: 0;
+			li {
+				position: relative;
+				float: left;
+				width: 33.33%;
+			}
+			.romb-form3, .romb-form4 {
+				left: 195px;
+				top: -68px;
+			}
+			.romb-form5 {
+				left: -778px;
+				top: 123px;
+			}
+			.romb-form6, .romb-form7 {
+				left: 389px;
+				top: -137px;
+			}
+			.romb-form8 {
+				left: -585px;
+				top: 56px;
+			}
+			.romb-form9 {
+				left: 584px;
+				top: -204px;
+			}
+			.romb-form10, .romb-form11 {
+				left: -390px;
+				top: -12px;
+			}
+			.romb-form12 {
+				left: 779px;
+				top: -272px;
+			}
+		}
+	}
+}
+.line-progressbar {
+	.progressbar-html, .progressbar-responsive, .progressbar-ios, .progressbar-js {
+		position: relative;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+}
+.ui-widget-header {
+	border:1px solid red;
+	background: red;
+	color:#000;
+	font-weight: bold;
+	position: relative;
+}
+.line-progressbar {
+	position: relative;
+	font-family: Exo;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 190px;
+	.html-label {
+		left: 5px;
+		top: -16px;
+		position: absolute;
+	}
+	.html-value {
+		position: absolute;
+		top: -16px;
+	}
+	.responsive-label {
+		left: 5px;
+		top: 32px;
+		position: absolute;
+	}
+	.responsive-value {
+		position: absolute;
+		top: 32px;
+	}
+	.ios-label {
+		left: 5px;
+		top: 80px;
+		position: absolute;
+	}
+	.ios-value {
+		position: absolute;
+		top: 80px;
+	}
+	.js-label {
+		left: 5px;
+		top: 128px;
+		position: absolute;
+	}
+	.js-value {
+		position: absolute;
+		top: 128px;
+	}
+	
+}
+.skills {
+	position: relative;
+	padding: 0;
+	p {
+		margin-bottom: 450px;
+	}
+	.romb-progressbar-box {
+		position: absolute;
+		top: 330px;
+		left: 350px;
+		.romb-pr-design {
+			width: 75px;
+			height: 75px;
+			display: inline-block;
+			border: 1px solid red;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 25px;
+			.progress-pr-design {
+				width: 200px;
+				height: 200px;
+				display: block;
+				background: red;
+				position: relative;
+				top: 91px;
+			}
+		}
+		.romb-pr-develop {
+			width: 75px;
+			height: 75px;
+			display: inline-block;
+			border: 1px solid red;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 258px;
+			.progress-pr-develop {
+				width: 200px;
+				height: 200px;
+				display: block;
+				background: red;
+				position: relative;
+				top: 91px;
+			}
+		}
+		.romb-pr-marketing {
+			width: 75px;
+			height: 75px;
+			display: inline-block;
+			border: 1px solid red;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 527px;
+			.progress-pr-marketing {
+				width: 200px;
+				height: 200px;
+				display: block;
+				background: red;
+				position: relative;
+				top: 91px;
+			}
+		}
+		.romb-pr-consulting {
+			width: 75px;
+			height: 75px;
+			display: inline-block;
+			border: 1px solid red;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 812px;
+			.progress-pr-consulting {
+				width: 200px;
+				height: 200px;
+				display: block;
+				background: red;
+				position: relative;
+				top: 91px;
+			}
+		}
+		.romb-pr-branding {
+			width: 75px;
+			height: 75px;
+			display: inline-block;
+			border: 1px solid red;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 1072px;
+			.progress-pr-branding {
+				width: 200px;
+				height: 200px;
+				display: block;
+				background: red;
+				position: relative;
+				top: 91px;
+			}
+		}
+	}
+	.box {
+		text-transform: uppercase;
+		font-family: Exo;
+		font-size: 24px;
+	}	
+	.design {
+		h4 {
+			position: absolute;
+			top: 70px;
+			left: 17px;
+		}
+		.design-value {
+			top: -16px;
+			left: 46px;
+			font-size: 30px;
+			color: #fff;
+		}
+	}
+	.develop {
+		h4 {
+			position: absolute;
+			top: 70px;
+			left: 218px;
+		}
+		.develop-value {
+			top: -16px;
+			left: 280px;
+			font-size: 30px;
+			color: #fff;
+		}
+	}
+	.marketing {
+		h4 {
+			position: absolute;
+			top: 70px;
+			left: 493px;
+		}
+		.marketing-value {
+			top: -16px;
+			left: 548px;
+			font-size: 30px;
+			color: #fff;
+		}
+	}
+	.consulting {
+		h4 {
+			position: absolute;
+			top: 70px;
+			left: 776px;
+		}
+		.consulting-value {
+			top: -16px;
+			left: 833px;
+			font-size: 30px;
+			color: #fff;
+		}
+	}	
+	.branding {
+		h4 {
+			position: absolute;
+			top: 70px;
+			left: 1050px;
+		}
+		.branding-value {
+			top: -16px;
+			left: 1092px;
+			font-size: 30px;
+			color: #fff;
+		}
+	}	
+}
+@media all and (max-width: 1681px) {
+	.skills {
+		.romb-progressbar-box {
+			left: 240px;
+		}
+		p {
+			margin-bottom: 425px;
+		}
+		.box {
+		font-size: 24px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 218px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 280px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 493px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 548px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 776px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 833px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 1050px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 1092px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 258px;
+			}
+			.romb-pr-marketing {
+				left: 527px;
+			}
+			.romb-pr-consulting {
+				left: 812px;
+			}
+			.romb-pr-branding {
+				left: 1072px;
+			}
+		}
+	}	
+}
+@media all and (max-width: 1369px) {
+	.skills {
+		.romb-progressbar-box {
+			left: 86px;
+		}
+		.box {
+		font-size: 24px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 218px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 280px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 493px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 548px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 776px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 833px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 1050px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 1092px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 258px;
+			}
+			.romb-pr-marketing {
+				left: 527px;
+			}
+			.romb-pr-consulting {
+				left: 812px;
+			}
+			.romb-pr-branding {
+				left: 1072px;
+			}
+		}
+	}
+}
+@media all and (max-width: 1281px) {
+	.skills {
+		.romb-progressbar-box {
+			left: 40px;
+		}
+		.box {
+		font-size: 24px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 218px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 280px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 493px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 548px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 776px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 833px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 1050px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 1092px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 258px;
+			}
+			.romb-pr-marketing {
+				left: 527px;
+			}
+			.romb-pr-consulting {
+				left: 812px;
+			}
+			.romb-pr-branding {
+				left: 1072px;
+			}
+		}
+	}
+}
+@media all and (max-width: 1025px) {
+	#header {
+		#nav {
+			ul {
+				margin: 0;
+			}
+		}
+	}
+	.filter-nav {
+		.romb, .grid {
+			display: none;
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			left: 26px;
+		}
+		.box {
+		font-size: 20px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 202px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 239px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 419px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 450px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 629px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 666px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 834px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 860px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 217px;
+			}
+			.romb-pr-marketing {
+				left: 429px;
+			}
+			.romb-pr-consulting {
+				left: 645px;
+			}
+			.romb-pr-branding {
+				left: 840px;
+			}
+		}
+	}
+}
+@media all and (max-width: 961px) {
+	.skills {
+		.box {
+		font-size: 20px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 202px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 239px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 419px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 450px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 629px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 666px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 834px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 860px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 217px;
+			}
+			.romb-pr-marketing {
+				left: 429px;
+			}
+			.romb-pr-consulting {
+				left: 645px;
+			}
+			.romb-pr-branding {
+				left: 840px;
+			}
+		}
+	}  
+}
+@media all and (max-width: 775px) {
+	#header {
+		.opener {
+		display: block;
+		}
+		#nav {
+			display: none;
+		}
+	}
+	.portfolio {
+		.opener {
+		display: inline-block;
+		float: left;
+		margin: 0 0 0 119px;
+		}
+		.filter-nav {
+			display: none;
+		}
+		.gallery-box {
+			margin-top: 50px;
+		}
+	}
+	.pageslider {
+	position: absolute;
+	left: 50%;
+	margin-left: -27px;
+	width: 54px;
+	height: 54px;
+	background: url(../images/page-slider-to-about-resize.png) no-repeat;
+	margin-top: -26px;
+	cursor: pointer;
+	}
+	.page-slider-portfolio {
+		background: url(../images/page-slider-to-portfolio-resize.png) no-repeat;
+	}
+	
+	.skills {
+		.romb-progressbar-box {
+			left: 8px;
+		}
+		.box {
+		font-size: 17px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 168px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 205px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 329px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 360px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 484px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 521px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 644px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 670px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 183px;
+			}
+			.romb-pr-marketing {
+				left: 339px;
+			}
+			.romb-pr-consulting {
+				left: 500px;
+			}
+			.romb-pr-branding {
+				left: 650px;
+			}
+		}
+	}  
+}
+@media all and (max-width: 641px) {
+	.about {
+		.social {
+			ul {
+				li {
+					margin: 0 15px 0 0;
+				}
+			}
+		}
+	}
+	.portfolio {
+		.opener {
+			margin: 11px 0 0 52px;
+		}
+	}	
+	.skills {
+		.box {
+		font-size: 17px;
+		}
+		.design {
+			h4 {
+				left: 17px;
+			}
+			.design-value {
+			top: -16px;
+			left: 46px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 132px;
+			}
+			.develop-value {
+			top: -16px;
+			left: 169px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 260px;
+			}
+			.marketing-value {
+			top: -16px;
+			left: 291px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 378px;
+			}
+			.consulting-value {
+			top: -16px;
+			left: 415px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 513px;
+			}
+			.branding-value {
+			top: -16px;
+			left: 539px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 25px;
+			}
+			.romb-pr-develop {
+				left: 147px;
+			}
+			.romb-pr-marketing {
+				left: 270px;
+			}
+			.romb-pr-consulting {
+				left: 394px;
+			}
+			.romb-pr-branding {
+				left: 519px;
+			}
+		}
+	} 
+}
+@media all and (max-width: 487px) {
+	.pageslider {
+		display: none;
+	}
+	section {
+		padding: 30px 0;
+	}
+	.about {
+		.social {
+			ul {
+				margin: 0 0 0 30px;
+				li {
+					margin: 10px 30px 0 30px;
+				}
+			}
+		}
+	}
+	.portfolio {
+		.opener {
+			margin: 11px 0 0 108px;
+		}
+	}	
+	.skills {
+		p {
+			margin-bottom: 500px;
+		}
+		.box {
+		font-size: 17px;
+		}
+		.design {
+			h4 {
+				left: 32px;
+				top: 120px;
+			}
+			.design-value {
+			top: 30px;
+			left: 61px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 181px;
+				top: 120px;
+			}
+			.develop-value {
+			top: 30px;
+			left: 215px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 328px;
+				top: 120px;
+			}
+			.marketing-value {
+			top: 30px;
+			left: 360px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 101px;
+				top: 280px;
+			}
+			.consulting-value {
+			top: 190px;
+			left: 136px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 262px;
+				top: 280px;
+			}
+			.branding-value {
+			top: 190px;
+			left: 288px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 40px;
+				top: 45px;
+			}
+			.romb-pr-develop {
+				left: 193px;
+				top: 45px;
+			}
+			.romb-pr-marketing {
+				left: 340px;
+				top: 45px;
+			}
+			.romb-pr-consulting {
+				left: 116px;
+				top: 205px;
+			}
+			.romb-pr-branding {
+				left: 268px;
+				top: 205px;
+			}
+		}
+	} 
+}
+@media all and (max-width: 321px) {
+	.about {
+		.social {
+			ul {
+				margin: 0 0 0 50px;
+				li {
+					margin: 13px;
+				}
+			}
+		}
+	}
+	.portfolio {
+		.opener {
+			margin: 11px 0 0 28px;
+		}
+	}	
+	.skills {
+		.box {
+			font-size: 17px;
+		}
+		p {
+			margin-bottom: 700px;
+		}
+		.design {
+			h4 {
+				left: 27px;
+				top: 175px;
+			}
+			.design-value {
+			top: 85px;
+			left: 54px;
+			}
+		}
+		.develop {
+			h4 {
+				left: 175px;
+				top: 175px;
+			}
+			.develop-value {
+			top: 85px;
+			left: 212px;
+			}
+		}
+	}
+	.skills{
+		.marketing {
+			h4 {
+				left: 21px;
+				top: 330px;
+			}
+			.marketing-value {
+			top: 240px;
+			left: 54px;
+			}
+		}
+	}
+	.skills{
+		.consulting {
+			h4 {
+				left: 175px;
+				top: 330px;
+			}
+			.consulting-value {
+			top: 240px;
+			left: 210px;
+			}
+		}
+	}
+	.skills{
+		.branding {
+			h4 {
+				left: 106px;
+				top: 485px;
+			}
+			.branding-value {
+			top: 395px;
+			left: 132px;
+			}
+		}
+	}
+	.skills {
+		.romb-progressbar-box {
+			.romb-pr-design {
+				left: 35px;
+				top: 100px;
+			}
+			.romb-pr-develop {
+				left: 190px;
+				top: 100px;
+			}
+			.romb-pr-marketing {
+				left: 35px;
+				top: 255px;
+			}
+			.romb-pr-consulting {
+				left: 190px;
+				top: 255px;
+			}
+			.romb-pr-branding {
+				left: 112px;
+				top: 408px;
+			}
+		}
+	} 
+	.line-progressbar {
+	position: relative;
+	font-family: Exo;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+	.html-label {
+		left: 5px;
+		top: -16px;
+		position: absolute;
+	}
+	.responsive-label {
+		left: 5px;
+		top: 30px;
+		position: absolute;
+	}
+	.ios-label {
+		left: 5px;
+		top: 74px;
+		position: absolute;
+	}
+	.js-label {
+		left: 5px;
+		top: 117px;
+		position: absolute;
+	}
+	}
+}
+

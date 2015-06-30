@@ -1,0 +1,1291 @@
+/* colors */
+/* font-size */
+/* backgrounds */
+@font-face {
+  font-family: Exo;
+  src: url(../fonts/Exo2.0-Black.otf);
+}
+@font-face {
+  font-family: Open-sans;
+  src: url(../fonts/Open-sans.ttf);
+}
+body {
+  margin: 0;
+  color: #494949;
+  font: 14px/22px Open-sans, Helvetica, sans-serif;
+  background: #f5f5f5;
+}
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+input,
+textarea,
+select {
+  font: 100% arial, sans-serif;
+  vertical-align: middle;
+}
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+header,
+footer,
+article,
+section,
+hgroup,
+nav,
+figure {
+  display: block;
+}
+/* Mixins */
+.float-healer {
+  display: block;
+  clear: both;
+  content: "";
+}
+.text-indent {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+/* End of Mixins */
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+#header .logo {
+  margin: 21px 0 22px;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  width: 128px;
+  height: 27px;
+  background: url(../images/logo.png) no-repeat;
+  float: left;
+}
+#header .logo a {
+  display: block;
+  height: 100%;
+}
+#header:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+#header .opener {
+  float: right;
+  width: 31px;
+  height: 31px;
+  background: #2f3235;
+  position: relative;
+  border-radius: 3px;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin: 19px 10px 20px 19px;
+  display: none;
+}
+#header .opener:before,
+#header .opener:after,
+#header .opener span {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  margin-top: -2px;
+}
+#header .opener:before,
+#header .opener:after {
+  content: "";
+  top: 10px;
+}
+#header .opener:after {
+  top: 22px;
+}
+#header .opener:hover {
+  opacity: 0.7;
+}
+#header #nav {
+  font-family: Exo;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#header #nav ul {
+  margin: 0 200px 0 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+#header #nav ul li {
+  float: left;
+}
+#header #nav ul li a {
+  display: block;
+  padding: 27px 20px 27px 24px;
+}
+#header #nav ul li a:hover {
+  text-decoration: none;
+  background: #dfdfdf;
+}
+#header #nav ul li.active a {
+  background: #dfdfdf;
+  border: 1px solid black;
+}
+#main:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+section {
+  text-align: center;
+  padding: 170px 0;
+}
+section h2 {
+  margin: 0 0 30px 0;
+  font-family: Exo;
+  font-size: 46px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: black;
+}
+.slider .slider-wrapper {
+  position: relative;
+  margin-bottom: -6px;
+}
+.slider .slider-wrapper #slider-box {
+  height: auto;
+}
+.slider .slider-wrapper #slider-box img {
+  display: none;
+  top: 0;
+  position: absolute;
+}
+.slider #slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 107px;
+  display: block;
+  text-indent: -9999px;
+}
+.slider #slider-nav .left {
+  float: left;
+  background: url(../images/slider-left-button.png) no-repeat;
+  display: block;
+  width: 74px;
+  height: 100%;
+  position: relative;
+  top: -50%;
+}
+.slider #slider-nav .right {
+  float: right;
+  background: url(../images/slider-right-button.png) no-repeat;
+  display: block;
+  width: 74px;
+  height: 100%;
+  position: relative;
+  top: -50%;
+}
+.pageslider {
+  position: absolute;
+  left: 50%;
+  margin-left: -54px;
+  width: 108px;
+  height: 107px;
+  background: url(../images/page-slider-to-about.png) no-repeat;
+  margin-top: -53px;
+  cursor: pointer;
+}
+.page-slider-portfolio {
+  background: url(../images/page-slider-to-portfolio.png) no-repeat;
+}
+.about {
+  background: #cbcbcb;
+}
+.about p {
+  margin: 20px 30px 40px;
+  font-size: 14px;
+  font-family: Open-sans;
+  line-height: 22px;
+}
+.about .logo {
+  margin-bottom: 40px;
+}
+.about .social {
+  text-align: center;
+}
+.about .social ul {
+  padding: 0;
+  display: inline-block;
+}
+.about .social ul li {
+  float: left;
+  list-style-type: none;
+  margin: 0 30px 0 0;
+}
+.about .social ul li a {
+  width: 75px;
+  height: 75px;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(../images/social-sprite.png) no-repeat;
+}
+.about .social ul li a:hover {
+  background: url(../images/social-sprite-hover.png) no-repeat;
+}
+.about .social ul li .facebook {
+  background-position: 0 0;
+}
+.about .social ul li .tweeter {
+  background-position: -105px 0;
+}
+.about .social ul li .dribbble {
+  background-position: -210px 0;
+}
+.about .social ul li .thumblr {
+  background-position: -315px 0;
+}
+.about .social ul li .linkedin {
+  background-position: -420px 0;
+}
+.about .social ul li .pinterest {
+  background-position: -525px 0;
+}
+.about .social ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.portfolio img {
+  display: block;
+  margin: 0 auto;
+}
+.portfolio .opener {
+  float: right;
+  width: 31px;
+  height: 31px;
+  background: #2f3235;
+  position: relative;
+  border-radius: 3px;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin: 19px 10px 20px 19px;
+  display: none;
+}
+.portfolio .opener:before,
+.portfolio .opener:after,
+.portfolio .opener span {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  margin-top: -2px;
+}
+.portfolio .opener:before,
+.portfolio .opener:after {
+  content: "";
+  top: 10px;
+}
+.portfolio .opener:after {
+  top: 22px;
+}
+.portfolio .opener:hover {
+  opacity: 0.7;
+}
+.portfolio .filter-nav {
+  text-align: center;
+}
+.portfolio .filter-nav ul {
+  display: inline-block;
+}
+.portfolio .filter-nav ul li {
+  float: left;
+  list-style-type: none;
+  border: 1px solid black;
+  font-family: Exo;
+  font-size: 15px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.portfolio .filter-nav ul li a {
+  padding: 0 15px;
+}
+.portfolio .filter-nav ul li:hover {
+  background: #dfdfdf;
+}
+.portfolio .filter-nav ul li:hover a {
+  text-decoration: none;
+}
+.portfolio .filter-nav ul .active {
+  background: #000;
+}
+.portfolio .filter-nav ul .active a {
+  color: #fff;
+}
+.portfolio .filter-nav ul .grid {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 37px;
+  height: 37px;
+  background: url(../images/icon-grid.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.portfolio .filter-nav ul .grid:hover {
+  background: url(../images/icon-grid-hover.png);
+}
+.portfolio .filter-nav ul .grid:hover a {
+  text-decoration: none;
+}
+.portfolio .filter-nav ul .grid-active-grid {
+  background: url(../images/icon-grid-active.png) no-repeat;
+}
+.portfolio .filter-nav ul .romb {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 37px;
+  height: 37px;
+  background: url(../images/icon-romb.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.portfolio .filter-nav ul .romb:hover {
+  background: url(../images/icon-romb-hover.png);
+}
+.portfolio .filter-nav ul .romb:hover a {
+  text-decoration: none;
+}
+.portfolio .filter-nav ul .romb-active-grid {
+  background: url(../images/icon-romb-active.png) no-repeat;
+}
+.portfolio .porfolio-gallery .gallery-box {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  padding: 0;
+}
+.portfolio .porfolio-gallery .gallery-box li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 0 10px 10px;
+  letter-spacing: normal;
+}
+.portfolio .romb-form {
+  position: relative;
+  height: 1200px;
+}
+.portfolio .romb-form .gallery-box {
+  position: absolute;
+  top: 80px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  padding: 0;
+}
+.portfolio .romb-form .gallery-box li {
+  position: relative;
+  float: left;
+  width: 33.33%;
+}
+.portfolio .romb-form .gallery-box .romb-form3,
+.portfolio .romb-form .gallery-box .romb-form4 {
+  left: 195px;
+  top: -68px;
+}
+.portfolio .romb-form .gallery-box .romb-form5 {
+  left: -778px;
+  top: 123px;
+}
+.portfolio .romb-form .gallery-box .romb-form6,
+.portfolio .romb-form .gallery-box .romb-form7 {
+  left: 389px;
+  top: -137px;
+}
+.portfolio .romb-form .gallery-box .romb-form8 {
+  left: -585px;
+  top: 56px;
+}
+.portfolio .romb-form .gallery-box .romb-form9 {
+  left: 584px;
+  top: -204px;
+}
+.portfolio .romb-form .gallery-box .romb-form10,
+.portfolio .romb-form .gallery-box .romb-form11 {
+  left: -390px;
+  top: -12px;
+}
+.portfolio .romb-form .gallery-box .romb-form12 {
+  left: 779px;
+  top: -272px;
+}
+.line-progressbar .progressbar-html,
+.line-progressbar .progressbar-responsive,
+.line-progressbar .progressbar-ios,
+.line-progressbar .progressbar-js {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.ui-widget-header {
+  border: 1px solid red;
+  background: red;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+}
+.line-progressbar {
+  position: relative;
+  font-family: Exo;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 190px;
+}
+.line-progressbar .html-label {
+  left: 5px;
+  top: -16px;
+  position: absolute;
+}
+.line-progressbar .html-value {
+  position: absolute;
+  top: -16px;
+}
+.line-progressbar .responsive-label {
+  left: 5px;
+  top: 32px;
+  position: absolute;
+}
+.line-progressbar .responsive-value {
+  position: absolute;
+  top: 32px;
+}
+.line-progressbar .ios-label {
+  left: 5px;
+  top: 80px;
+  position: absolute;
+}
+.line-progressbar .ios-value {
+  position: absolute;
+  top: 80px;
+}
+.line-progressbar .js-label {
+  left: 5px;
+  top: 128px;
+  position: absolute;
+}
+.line-progressbar .js-value {
+  position: absolute;
+  top: 128px;
+}
+.skills {
+  position: relative;
+  padding: 0;
+}
+.skills p {
+  margin-bottom: 450px;
+}
+.skills .romb-progressbar-box {
+  position: absolute;
+  top: 330px;
+  left: 350px;
+}
+.skills .romb-progressbar-box .romb-pr-design {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 25px;
+}
+.skills .romb-progressbar-box .romb-pr-design .progress-pr-design {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: red;
+  position: relative;
+  top: 91px;
+}
+.skills .romb-progressbar-box .romb-pr-develop {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 258px;
+}
+.skills .romb-progressbar-box .romb-pr-develop .progress-pr-develop {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: red;
+  position: relative;
+  top: 91px;
+}
+.skills .romb-progressbar-box .romb-pr-marketing {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 527px;
+}
+.skills .romb-progressbar-box .romb-pr-marketing .progress-pr-marketing {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: red;
+  position: relative;
+  top: 91px;
+}
+.skills .romb-progressbar-box .romb-pr-consulting {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 812px;
+}
+.skills .romb-progressbar-box .romb-pr-consulting .progress-pr-consulting {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: red;
+  position: relative;
+  top: 91px;
+}
+.skills .romb-progressbar-box .romb-pr-branding {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border: 1px solid red;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 1072px;
+}
+.skills .romb-progressbar-box .romb-pr-branding .progress-pr-branding {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: red;
+  position: relative;
+  top: 91px;
+}
+.skills .box {
+  text-transform: uppercase;
+  font-family: Exo;
+  font-size: 24px;
+}
+.skills .design h4 {
+  position: absolute;
+  top: 70px;
+  left: 17px;
+}
+.skills .design .design-value {
+  top: -16px;
+  left: 46px;
+  font-size: 30px;
+  color: #fff;
+}
+.skills .develop h4 {
+  position: absolute;
+  top: 70px;
+  left: 218px;
+}
+.skills .develop .develop-value {
+  top: -16px;
+  left: 280px;
+  font-size: 30px;
+  color: #fff;
+}
+.skills .marketing h4 {
+  position: absolute;
+  top: 70px;
+  left: 493px;
+}
+.skills .marketing .marketing-value {
+  top: -16px;
+  left: 548px;
+  font-size: 30px;
+  color: #fff;
+}
+.skills .consulting h4 {
+  position: absolute;
+  top: 70px;
+  left: 776px;
+}
+.skills .consulting .consulting-value {
+  top: -16px;
+  left: 833px;
+  font-size: 30px;
+  color: #fff;
+}
+.skills .branding h4 {
+  position: absolute;
+  top: 70px;
+  left: 1050px;
+}
+.skills .branding .branding-value {
+  top: -16px;
+  left: 1092px;
+  font-size: 30px;
+  color: #fff;
+}
+@media all and (max-width: 1681px) {
+  .skills .romb-progressbar-box {
+    left: 240px;
+  }
+  .skills p {
+    margin-bottom: 425px;
+  }
+  .skills .box {
+    font-size: 24px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 218px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 280px;
+  }
+  .skills .marketing h4 {
+    left: 493px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 548px;
+  }
+  .skills .consulting h4 {
+    left: 776px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 833px;
+  }
+  .skills .branding h4 {
+    left: 1050px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 1092px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 258px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 527px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 812px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 1072px;
+  }
+}
+@media all and (max-width: 1369px) {
+  .skills .romb-progressbar-box {
+    left: 86px;
+  }
+  .skills .box {
+    font-size: 24px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 218px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 280px;
+  }
+  .skills .marketing h4 {
+    left: 493px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 548px;
+  }
+  .skills .consulting h4 {
+    left: 776px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 833px;
+  }
+  .skills .branding h4 {
+    left: 1050px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 1092px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 258px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 527px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 812px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 1072px;
+  }
+}
+@media all and (max-width: 1281px) {
+  .skills .romb-progressbar-box {
+    left: 40px;
+  }
+  .skills .box {
+    font-size: 24px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 218px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 280px;
+  }
+  .skills .marketing h4 {
+    left: 493px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 548px;
+  }
+  .skills .consulting h4 {
+    left: 776px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 833px;
+  }
+  .skills .branding h4 {
+    left: 1050px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 1092px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 258px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 527px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 812px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 1072px;
+  }
+}
+@media all and (max-width: 1025px) {
+  #header #nav ul {
+    margin: 0;
+  }
+  .filter-nav .romb,
+  .filter-nav .grid {
+    display: none;
+  }
+  .skills .romb-progressbar-box {
+    left: 26px;
+  }
+  .skills .box {
+    font-size: 20px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 202px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 239px;
+  }
+  .skills .marketing h4 {
+    left: 419px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 450px;
+  }
+  .skills .consulting h4 {
+    left: 629px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 666px;
+  }
+  .skills .branding h4 {
+    left: 834px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 860px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 217px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 429px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 645px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 840px;
+  }
+}
+@media all and (max-width: 961px) {
+  .skills .box {
+    font-size: 20px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 202px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 239px;
+  }
+  .skills .marketing h4 {
+    left: 419px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 450px;
+  }
+  .skills .consulting h4 {
+    left: 629px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 666px;
+  }
+  .skills .branding h4 {
+    left: 834px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 860px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 217px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 429px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 645px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 840px;
+  }
+}
+@media all and (max-width: 775px) {
+  #header .opener {
+    display: block;
+  }
+  #header #nav {
+    display: none;
+  }
+  .portfolio .opener {
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 119px;
+  }
+  .portfolio .filter-nav {
+    display: none;
+  }
+  .portfolio .gallery-box {
+    margin-top: 50px;
+  }
+  .pageslider {
+    position: absolute;
+    left: 50%;
+    margin-left: -27px;
+    width: 54px;
+    height: 54px;
+    background: url(../images/page-slider-to-about-resize.png) no-repeat;
+    margin-top: -26px;
+    cursor: pointer;
+  }
+  .page-slider-portfolio {
+    background: url(../images/page-slider-to-portfolio-resize.png) no-repeat;
+  }
+  .skills .romb-progressbar-box {
+    left: 8px;
+  }
+  .skills .box {
+    font-size: 17px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 168px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 205px;
+  }
+  .skills .marketing h4 {
+    left: 329px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 360px;
+  }
+  .skills .consulting h4 {
+    left: 484px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 521px;
+  }
+  .skills .branding h4 {
+    left: 644px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 670px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 183px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 339px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 500px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 650px;
+  }
+}
+@media all and (max-width: 641px) {
+  .about .social ul li {
+    margin: 0 15px 0 0;
+  }
+  .portfolio .opener {
+    margin: 11px 0 0 52px;
+  }
+  .skills .box {
+    font-size: 17px;
+  }
+  .skills .design h4 {
+    left: 17px;
+  }
+  .skills .design .design-value {
+    top: -16px;
+    left: 46px;
+  }
+  .skills .develop h4 {
+    left: 132px;
+  }
+  .skills .develop .develop-value {
+    top: -16px;
+    left: 169px;
+  }
+  .skills .marketing h4 {
+    left: 260px;
+  }
+  .skills .marketing .marketing-value {
+    top: -16px;
+    left: 291px;
+  }
+  .skills .consulting h4 {
+    left: 378px;
+  }
+  .skills .consulting .consulting-value {
+    top: -16px;
+    left: 415px;
+  }
+  .skills .branding h4 {
+    left: 513px;
+  }
+  .skills .branding .branding-value {
+    top: -16px;
+    left: 539px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 25px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 147px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 270px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 394px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 519px;
+  }
+}
+@media all and (max-width: 487px) {
+  .pageslider {
+    display: none;
+  }
+  section {
+    padding: 30px 0;
+  }
+  .about .social ul {
+    margin: 0 0 0 30px;
+  }
+  .about .social ul li {
+    margin: 10px 30px 0 30px;
+  }
+  .portfolio .opener {
+    margin: 11px 0 0 108px;
+  }
+  .skills p {
+    margin-bottom: 500px;
+  }
+  .skills .box {
+    font-size: 17px;
+  }
+  .skills .design h4 {
+    left: 32px;
+    top: 120px;
+  }
+  .skills .design .design-value {
+    top: 30px;
+    left: 61px;
+  }
+  .skills .develop h4 {
+    left: 181px;
+    top: 120px;
+  }
+  .skills .develop .develop-value {
+    top: 30px;
+    left: 215px;
+  }
+  .skills .marketing h4 {
+    left: 328px;
+    top: 120px;
+  }
+  .skills .marketing .marketing-value {
+    top: 30px;
+    left: 360px;
+  }
+  .skills .consulting h4 {
+    left: 101px;
+    top: 280px;
+  }
+  .skills .consulting .consulting-value {
+    top: 190px;
+    left: 136px;
+  }
+  .skills .branding h4 {
+    left: 262px;
+    top: 280px;
+  }
+  .skills .branding .branding-value {
+    top: 190px;
+    left: 288px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 40px;
+    top: 45px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 193px;
+    top: 45px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 340px;
+    top: 45px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 116px;
+    top: 205px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 268px;
+    top: 205px;
+  }
+}
+@media all and (max-width: 321px) {
+  .about .social ul {
+    margin: 0 0 0 50px;
+  }
+  .about .social ul li {
+    margin: 13px;
+  }
+  .portfolio .opener {
+    margin: 11px 0 0 28px;
+  }
+  .skills .box {
+    font-size: 17px;
+  }
+  .skills p {
+    margin-bottom: 700px;
+  }
+  .skills .design h4 {
+    left: 27px;
+    top: 175px;
+  }
+  .skills .design .design-value {
+    top: 85px;
+    left: 54px;
+  }
+  .skills .develop h4 {
+    left: 175px;
+    top: 175px;
+  }
+  .skills .develop .develop-value {
+    top: 85px;
+    left: 212px;
+  }
+  .skills .marketing h4 {
+    left: 21px;
+    top: 330px;
+  }
+  .skills .marketing .marketing-value {
+    top: 240px;
+    left: 54px;
+  }
+  .skills .consulting h4 {
+    left: 175px;
+    top: 330px;
+  }
+  .skills .consulting .consulting-value {
+    top: 240px;
+    left: 210px;
+  }
+  .skills .branding h4 {
+    left: 106px;
+    top: 485px;
+  }
+  .skills .branding .branding-value {
+    top: 395px;
+    left: 132px;
+  }
+  .skills .romb-progressbar-box .romb-pr-design {
+    left: 35px;
+    top: 100px;
+  }
+  .skills .romb-progressbar-box .romb-pr-develop {
+    left: 190px;
+    top: 100px;
+  }
+  .skills .romb-progressbar-box .romb-pr-marketing {
+    left: 35px;
+    top: 255px;
+  }
+  .skills .romb-progressbar-box .romb-pr-consulting {
+    left: 190px;
+    top: 255px;
+  }
+  .skills .romb-progressbar-box .romb-pr-branding {
+    left: 112px;
+    top: 408px;
+  }
+  .line-progressbar {
+    position: relative;
+    font-family: Exo;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .line-progressbar .html-label {
+    left: 5px;
+    top: -16px;
+    position: absolute;
+  }
+  .line-progressbar .responsive-label {
+    left: 5px;
+    top: 30px;
+    position: absolute;
+  }
+  .line-progressbar .ios-label {
+    left: 5px;
+    top: 74px;
+    position: absolute;
+  }
+  .line-progressbar .js-label {
+    left: 5px;
+    top: 117px;
+    position: absolute;
+  }
+}

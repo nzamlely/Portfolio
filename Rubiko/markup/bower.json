@@ -1,0 +1,21 @@
+{
+  "name": "markup",
+  "version": "0.0.0",
+  "authors": [
+    "nzamlely <n.zamlely@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-2.1.4.min": "http://code.jquery.com/jquery-2.1.4.min.js"
+  }
+}
